@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../assets/lib/layui/css/layui.css" />
+  <link rel="stylesheet" href="../assets/lib/cropper/cropper.css" />
+  <link rel="stylesheet" href="../assets/css/user/user_avatar.css" />
+</head>
+
+<body>
+
+  <!-- 卡片区域 -->
+  <div class="layui-card">
+    <div class="layui-card-header">更换头像</div>
+    <div class="layui-card-body">
+      <div class="outer-box">
+        <!-- 裁剪区域 -->
+        <!-- Wrap the image or canvas element with a block element (container) -->
+        <div class="cropper-box">
+          <img id="image" src="../../assets/images/sample.jpg" />
+        </div>
+
+        <!-- 预览区域 -->
+        <div class="preview-box">
+          <div class="img-preview w100"></div>
+          <p>100 x 100</p>
+          <div class="img-preview w50"></div>
+          <p>50 x 50</p>
+        </div>
+      </div>
+
+      <!-- 底部按钮区域 -->
+      <div class="btns">
+        <button class="layui-btn" id="btnChooseImage">上传</button>
+        <button class="layui-btn layui-btn-danger" id="btnCreateAvatar">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 文件选择框 -->
+  <!-- 通过 accept 属性控制选择的文件类型 -->
+  <input type="file" id="file" style="display: none;" accept="image/jpeg,image/png,image/bmp,image/gif" />
+
+  <script src="../assets/lib/layui/layui.all.js"></script>
+  <script src="../assets/lib/jquery.js"></script>
+  <script src="../assets/lib/axios.min.js"></script>
+
+  <!-- 裁切图片插件 -->
+  <script src="../assets/lib/cropper/Cropper.js"></script>
+  <script src="../assets/lib/cropper/jquery-cropper.js"></script>
+
+  <!-- 自己的js文件 -->
+  <script src="../assets/js/user/user_avatar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f3f5;
+}
+
+body {
+  padding: 15px;
+}
+
+/* Limit image width to avoid overflow the container */
+img {
+  max-width: 100%; /* This rule is very important, please do not ignore this! */
+}
+
+/* 裁剪区域的宽和高 */
+.cropper-box {
+  width: 350px;
+  height: 350px;
+}
+
+/* 预览盒子1 */
+.w100 {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* 预览盒子2 */
+.w50 {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-top: 50px;
+  border-radius: 50%;
+}
+
+.outer-box {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 预览区域的外出盒子 */
+.preview-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+}
+
+/* 底部按钮的样式 */
+.btns {
+  width: 500px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#iptAvatar {
+  display: none;
+}
