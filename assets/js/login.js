@@ -31,7 +31,7 @@ $(function() {
 
     let data = $(this).serialize()
     console.log(data);
-    axios.post("http://ajax.frontend.itheima.net/api/reguser", data).then((res) => {
+    axios.post("/api/reguser", data).then((res) => {
       console.log();
       if(res.data.status !== 0) {
         return layer.msg("注册失败" + res.data.message);
@@ -47,14 +47,17 @@ $(function() {
     e.preventDefault()
 
     let data = $(this).serialize()
-    console.log(data);
-    axios.post("http://ajax.frontend.itheima.net/api/login", data).then((res) => {
-      console.log(res.data);
+    axios.post("/api/login", data).then((res) => {
       if(res.data.status !== 0) {
+        // 登录失败
         return layer.msg("登录失败");
       }
+      // 登录成功
+      // 存储token
       localStorage.setItem('token',res.data.token)
-      layer.msg('登录成功',function() {
+      // 提示成功
+      layer.msg('登录成功',{time: 1000},function() {
+        // 跳转到主页
         location.href = './index.html'
       });
     });
